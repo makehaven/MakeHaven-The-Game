@@ -1,0 +1,27 @@
+const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
+const fs = require('node:fs');
+const path = require('node:path');
+(async () => {
+  const browser = await chromium.launch({ headless: true, executablePath: process.env.CHROME_PATH, args: ['--no-sandbox', '--enable-unsafe-swiftshader'] });
+  const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  page.on('console', m => { if(m.type()==='error') console.log('console:',m.text()); });
+  await page.goto('http://127.0.0.1:8093/?test=1');
+  await page.waitForFunction(() => window.__makehaven, { timeout: 30000 });
+  await page.waitForTimeout(500);
+  fs.mkdirSync('docs/screenshots', {recursive:true});
+  await page.screenshot({path:'docs/screenshots/welcome.png'});
+  console.log('Welcome', await page.evaluate(() => window.__makehaven.snapshot()));
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => window.__makehaven.snapshot().mode==='map');
+  await page.screenshot({path:'docs/screenshots/shop-map.png'});
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => window.__makehaven.snapshot().mode==='explore');
+  await page.waitForTimeout(200);
+  await page.screenshot({path:'docs/screenshots/woodshop.png'});
+  console.log('Explore', await page.evaluate(() => window.__makehaven.snapshot()));
+  console.log('Runtime errors', errors);
+  await browser.close();
+  if(errors.length) process.exitCode=1;
+})().catch(e => { console.error(e); process.exit(1); });
