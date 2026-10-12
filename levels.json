@@ -1,0 +1,50 @@
+[
+  {
+    "scene": "Woodshop", "id": "woodshop", "title": "Woodshop", "tag": "A little house. A big welcome.",
+    "color": "237;172;82", "hex": "#edac52", "material": "wood pieces", "item": "WOOD", "project": "a birdhouse", "challenge": "assemble",
+    "fact": "From a first cutting board to custom furniture, a project starts with an idea.",
+    "invitation": "Ask a MakeHaven facilitator about getting started in the woodshop.",
+    "platforms": [[160,540,190],[400,440,190],[650,340,190],[920,430,190],[700,550,190]],
+    "parts": ["Base", "Walls", "Roof"], "order": [0,1,2]
+  },
+  {
+    "scene": "Textiles", "id": "textiles", "title": "Textiles", "tag": "Make a pattern your own.",
+    "color": "100;216;197", "hex": "#64d8c5", "material": "fabric pieces", "item": "FABRIC", "project": "a stitched patch", "challenge": "pattern",
+    "fact": "Fabric, thread, and a little imagination can become something you wear or share.",
+    "invitation": "Ask about sewing, embroidery, and the textile tools in the space.",
+    "platforms": [[160,530,200],[420,530,180],[430,410,180],[700,310,190],[970,430,170]],
+    "parts": ["Coral", "Gold", "Teal"], "order": [2,0,1,2]
+  },
+  {
+    "scene": "MetalShop", "id": "metalshop", "title": "Metal shop", "tag": "Small pieces. Strong connections.",
+    "color": "245;142;98", "hex": "#f58e62", "material": "metal pieces", "item": "METAL", "project": "a metal sculpture", "challenge": "timing",
+    "fact": "Metalworking turns strong materials into useful objects and expressive sculpture.",
+    "invitation": "Curious about metalworking? Ask a facilitator about tool introductions.",
+    "platforms": [[160,540,180],[410,440,190],[690,500,180],[930,390,180],[660,290,180]],
+    "parts": ["Base", "Stem", "Petals"], "order": [0,1,2]
+  },
+  {
+    "scene": "Electronics", "id": "electronics", "title": "Electronics", "tag": "Bring your idea to light.",
+    "color": "192;221;99", "hex": "#c0dd63", "material": "components", "item": "PART", "project": "a glowing circuit", "challenge": "circuit",
+    "fact": "Circuits can give your projects light, sound, movement, and a way to sense the world.",
+    "invitation": "Ask about electronics tools and making your first interactive project.",
+    "platforms": [[150,530,180],[400,420,190],[660,530,180],[690,300,170],[940,410,190]],
+    "parts": ["Wire 1", "Wire 2", "Wire 3"], "order": [0,0,0]
+  },
+  {
+    "scene": "Printmaking", "id": "printmaking", "title": "Printmaking", "tag": "One layer changes everything.",
+    "color": "216;156;235", "hex": "#d89ceb", "material": "ink colors", "item": "INK", "project": "a layered art print", "challenge": "register",
+    "fact": "Registration lines up each color so separate layers become one finished print.",
+    "invitation": "Ask about the printmaking tools and how to make a print of your own.",
+    "platforms": [[160,540,190],[410,440,190],[160,320,190],[680,350,190],[960,450,180]],
+    "parts": ["Coral", "Teal", "Gold"], "order": [0,1,2]
+  },
+  {
+    "scene": "BioLab", "id": "biolab", "title": "BioLab", "tag": "Discover the small wonders.",
+    "color": "118;217;171", "hex": "#76d9ab", "material": "sample slides", "item": "SLIDE", "project": "a microscope discovery", "challenge": "focus",
+    "fact": "A microscope reveals patterns and structures that are too small to see unaided.",
+    "invitation": "Ask what is happening in the community BioLab and how to get involved.",
+    "platforms": [[160,540,190],[400,440,190],[650,330,190],[920,440,190],[430,240,180]],
+    "parts": ["Leaf", "Pollen", "Yeast"], "order": [0,1,2]
+  }
+]

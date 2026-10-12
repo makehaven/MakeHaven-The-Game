@@ -1,2 +1,5 @@
 gdevelop-game.zip
 *:Zone.Identifier
+/build/
+/output/
+/node_modules/
